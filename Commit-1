@@ -1,0 +1,68 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using AwesomeCalculator;
+using NUnit.Framework;
+
+namespace AwesomeCalculatorTest
+{
+    public class Class1
+    {
+        class CalcTests
+        {
+            [Test]
+            public void GetAddition_Input3point4and5point6_Returns9point0()
+            {
+                //Arrange
+                double number1 = 3.4;
+                double number2 = 5.6;
+                double expectedResult = number1 + number2;
+                Calc testCalc = new Calc(number1, number2);
+                //Act
+                double actualResult = testCalc.GetAddition();
+                //Assert
+                Assert.AreEqual(expectedResult, actualResult);
+            }
+
+            [Test]
+            public void GetAddition_InputMinus30and5ReturnsMinus25()
+            {
+                //Arrange
+                int number1 = -30;
+                double number2 = 5;
+                double expectedResult = number1 + number2;
+                Calc testCalc = new Calc(number1, number2);
+                //Act
+                double actualResult = testCalc.GetAddition();
+                //Assert
+                Assert.AreEqual(expectedResult, actualResult);
+            }
+            [Test]
+            public void GetAddition_Input100point5and50point60_Returns151point1()
+            {
+                //Arrange
+                double number1 = 3.4;
+                double number2 = 5.6;
+                double expectedResult = number1 + number2;
+                Calc testCalc = new Calc(number1, number2);
+                //Act
+                double actualResult = testCalc.GetAddition();
+                //Assert
+                Assert.AreEqual(expectedResult, actualResult);
+            }
+
+            [Test]
+            public void GetAddition_Input34and52Returns86()
+            {
+                //Arrange
+                int number1 = 34;
+                int number2 = 52;
+                int expectedResult = number1 + number2;
+                Calc testCalc = new Calc(number1, number2);
+                //Act
+                double actualResult = testCalc.GetAddition();
+                //Assert
+                Assert.AreEqual(expectedResult, actualResult);
+            }
